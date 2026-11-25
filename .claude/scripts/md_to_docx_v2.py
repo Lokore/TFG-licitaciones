@@ -26,12 +26,14 @@ from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-# La Figura 1 es el nuevo diagrama de fases del diseno de la investigacion
-# (8.1.1/8.1.2); la Figura 2 es el diagrama funcional del prototipo web
-# (antiguo figura1.png). figura2.png (flujo de tareas, ya eliminado del
-# cuerpo) no se usa en esta version del documento.
+# La Figura 1 es el diagrama de flujo de las 10 fases/tareas del trabajo
+# (8.1, coincide con la Tabla 1 y el texto actual): el archivo correcto es
+# figura2.png, NO figura_fases.png (version vieja de 5 fases, ya obsoleta,
+# que contradice el apartado 8 y se descarta). La Figura 2 es el diagrama
+# funcional del prototipo web, archivo figura1.png (nombre historico, no
+# se corresponde con el numero de figura actual).
 FIGURE_IMAGES = {
-    'Figura 1:': 'trabajo/img/figura_fases.png',
+    'Figura 1:': 'trabajo/img/figura2.png',
     'Figura 2:': 'trabajo/img/figura1.png',
 }
 
@@ -51,18 +53,21 @@ def strip_html_comments(text):
 
 
 def parse_inline(text):
-    """Devuelve lista de (texto, bold, italic) interpretando **negrita** y
-    ***negrita cursiva*** de markdown. No hay cursiva simple en el borrador."""
+    """Devuelve lista de (texto, bold, italic) interpretando ***negrita
+    cursiva***, **negrita** y *cursiva* de markdown (p. ej. el parrafo de
+    cierre "Definicion del problema:" de la seccion 1, en cursiva simple)."""
     tokens = []
     pos = 0
-    pattern = re.compile(r'(\*\*\*(.+?)\*\*\*)|(\*\*(.+?)\*\*)')
+    pattern = re.compile(r'(\*\*\*(.+?)\*\*\*)|(\*\*(.+?)\*\*)|(\*(.+?)\*)')
     for m in pattern.finditer(text):
         if m.start() > pos:
             tokens.append((text[pos:m.start()], False, False))
         if m.group(1) is not None:
             tokens.append((m.group(2), True, True))
-        else:
+        elif m.group(3) is not None:
             tokens.append((m.group(4), True, False))
+        else:
+            tokens.append((m.group(6), False, True))
         pos = m.end()
     if pos < len(text):
         tokens.append((text[pos:], False, False))

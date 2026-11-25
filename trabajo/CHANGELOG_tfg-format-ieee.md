@@ -236,6 +236,133 @@ documentadas abajo para que cualquier regeneracion futura sea reproducible.
 - Falta el párrafo de cierre en cursiva "*Definición del problema: ...*" de
   la sección 1 (ver punto 10 arriba); es contenido pendiente, no formato.
 
+---
+
+## Versión LaTeX (nueva entrega, misma pasada de contenido ya cerrada)
+
+Documento generado: `trabajo/Anteproyecto_licitaciones_Ivan_Alex_CORREGIDO.tex`
+y `trabajo/Anteproyecto_licitaciones_Ivan_Alex_CORREGIDO.pdf` (50 páginas, A4).
+Fuente: `trabajo/anteproyecto_borrador.md`, ya con el párrafo "Definición del
+problema:" en cursiva al cierre de la sección 1 (la limitación señalada arriba
+para la versión Word ya no aplica: el contenido llegó completo a esta pasada).
+
+**Por qué existe una versión en LaTeX además del .docx:** la cátedra entregó
+`ptfg_ieee.pdf` como PDF ya compilado desde una plantilla LaTeX, pero no el
+código `.tex` fuente. No se pudo partir de ese archivo; se reconstruyó un
+documento `.tex` desde cero que replica su apariencia (portada, índice,
+numeración decimal multinivel, estilo de "Tabla N:"/"Figura N:", párrafo
+"Definición del problema:" en cursiva) a partir de la medición visual del PDF
+oficial (páginas renderizadas con `pdftoppm` e inspeccionadas directamente) y
+de las mismas medidas ya usadas para el `.docx` (A4, márgenes 3.5/3.5/3.5/3.0
+cm, Times New Roman 12 pt vía el paquete `mathptmx`).
+
+### Herramientas usadas
+
+- `pdftoppm` (poppler-utils) para renderizar páginas de `ptfg_ieee.pdf` a PNG
+  e inspeccionarlas visualmente (portada, índice, encabezados, tablas,
+  ecuación, referencias) antes de diseñar el `.tex`.
+- Tres scripts Python (en el directorio de trabajo temporal de la sesión, no
+  forman parte de la entrega): `md_to_tex.py` (convierte Markdown a LaTeX:
+  encabezados → `\section`.`\subparagraph` con numeración automática de
+  LaTeX, listas, negrita/cursiva, comillas tipográficas, la ecuación MAVT a
+  notación matemática real, la lista de referencias a un entorno con sangría
+  francesa), `build_tables.py` (las 2 tablas Markdown a `longtable` con
+  `booktabs`), `assemble.py` (preámbulo + portada + ensamblado final).
+- Compilación con `pdflatex` (3 pasadas, necesarias para resolver el índice y
+  las referencias cruzadas de la ecuación). Verificación: inspección del log
+  de cada pasada (sin errores, `overfull`/`underfull hbox` reducidos a menos
+  de 0.5 cm tras ajustes, ver abajo) y renderizado de páginas clave a PNG con
+  `pdftoppm` para confirmar visualmente portada, índice, encabezados de los 5
+  niveles, ambas figuras, ambas tablas, la ecuación numerada y la lista de
+  referencias.
+
+### Decisiones de maquetación específicas de LaTeX
+
+1. **Numeración multinivel real**: se usan los contadores nativos de LaTeX
+   (`\section` … `\subparagraph`, con `secnumdepth`/`tocdepth` en 5 para
+   llegar a niveles como 7.1.1.3.1 y 7.1.3.1.1) en lugar de escribir los
+   números a mano; el script quita el número que traía el título en el
+   Markdown y deja que LaTeX lo regenere, igual que se hizo con `numPr` en el
+   `.docx`. Los 2 subtítulos sin numerar del apartado 8 ("Tipo de
+   investigación", "Enfoque de la investigación") se mantienen sin número y
+   fuera del índice usando la variante con asterisco (`\subsubsection*`),
+   igual que la decisión ya tomada para el `.docx`.
+2. **Índice**: `\tableofcontents` real (no una lista estática), con
+   `\contentsname` forzado a "Índice" (babel-spanish usa por defecto "Índice
+   general"). A diferencia del `.docx`, en LaTeX el índice se recalcula solo
+   en cada compilación, sin pasos manuales pendientes para el usuario.
+3. **"Tabla N:"**: se detectó que babel-spanish traduce el nombre del
+   contador de tablas como "Cuadro" por defecto; se fuerza
+   `\renewcommand{\tablename}{Tabla}` (después de `\begin{document}`, porque
+   babel lo redefine justo ahí y un `\renewcommand` anterior era
+   sobrescrito) para que coincida con la plantilla oficial y con el `.docx`
+   ya entregado.
+4. **Ecuación de la sección 7.1.1.3.1 (MAVT)**: a diferencia del `.docx`
+   (donde se dejó como texto con formato visual distinguible, ver punto 9 del
+   changelog de arriba, por no poder editar OMML con seguridad desde
+   python-docx), en LaTeX sí se convirtió a notación matemática real y
+   numerada: `$$V(a) = \sum_{j=1}^{m} w_j \cdot v_j(x_j(a)), \quad w_j \geq
+   0, \quad \sum_{j=1}^{m} w_j = 1.$$` dentro de un entorno `equation`, fiel
+   al texto original (no se alteró el contenido matemático, solo se
+   tipografiaron los subíndices/sumatorias que en el Markdown estaban escritos
+   con caracteres Unicode sueltos). Las menciones sueltas de `V(a)` y
+   `V(a) − V(b)` en el cuerpo del texto también se tipografiaron en modo
+   matemático.
+5. **Tablas**: la Tabla 1 (cronograma, 9 columnas × 53 filas) se puso en
+   página apaisada (`pdflscape`) porque en vertical no entraban las 8
+   columnas de meses con texto legible; la Tabla 2 (operacionalización, 4
+   columnas) se mantuvo en vertical. Ambas son `longtable` (no flotantes, se
+   repiten automáticamente con `\endhead`/`\endfirsthead` si saltan de
+   página) con encabezado en negrita y `booktabs` para los bordes.
+6. **Referencias**: entorno de lista propio (`reflist`) con sangría francesa
+   de 1 cm, igual que en el `.docx`. Cada entrada usa `\item[]` (corchetes
+   vacíos) antes del texto de la referencia; sin eso, LaTeX interpreta el
+   "[1]" literal de cada referencia como el argumento opcional de `\item` (lo
+   detecté al revisar la primera compilación: el PDF mostraba "1" sin
+   corchetes en vez de "[1]"). Las URLs se envuelven en `\url{}` (con la
+   opción `hyphens` pasada al paquete `url` antes de cargar `hyperref`) para
+   que corten en los guiones en vez de desbordar el margen; se mantiene la
+   decisión ya tomada de coma dentro de las comillas.
+7. **Microtipografía**: se agregó el paquete `microtype` y `\sloppy` dentro
+   del entorno de referencias para eliminar casi todos los `overfull hbox`
+   causados por URLs/DOIs largos sin puntos de corte; los que quedan tras 3
+   pasadas de compilación son menores a 0.5 cm (imperceptibles).
+
+### Verificación final
+
+- Compilación limpia con `pdflatex` (3 pasadas) sin errores (`grep "^!"` sobre
+  el log no encuentra errores fatales en la compilación final).
+- 50 páginas, A4, sin advertencias de fuente faltante.
+- Verificación visual con `pdftoppm` de: portada (coincide con el diseño de
+  `ptfg_ieee.pdf`), índice (54 entradas, mismos niveles que el `.docx`),
+  encabezados de los 5 niveles, Figura 1 y Figura 2 con leyenda en negrita
+  debajo, Tabla 1 y Tabla 2 con leyenda en negrita encima, la ecuación MAVT
+  numerada "(1)", el párrafo "Definición del problema:" en cursiva al cierre
+  de la sección 1, y las 42 referencias con "[N]" visible y sangría francesa.
+
+### Limitaciones de este enfoque (sin el `.tex` original de la cátedra)
+
+- No existe forma de verificar al 100% que la tipografía, el tamaño exacto de
+  los encabezados o el espaciado vertical coincidan carácter por carácter con
+  el `.tex` original de la cátedra, porque nunca se tuvo acceso a ese archivo:
+  todo se reconstruyó midiendo visualmente el PDF compilado. El resultado es
+  una réplica fiel en estructura y convenciones (numeración, leyendas,
+  portada, índice), no una copia binaria del documento fuente.
+- La plantilla oficial en sí misma es inconsistente en un punto puntual: la
+  entrada del índice dice "Referencias Bibliográficas" (con B mayúscula) pero
+  el título de esa sección en el cuerpo del PDF dice "Referencias
+  bibliográficas" (b minúscula). Se priorizó la consistencia con el `.docx`
+  ya entregado (que usa "Referencias Bibliográficas" con B mayúscula en
+  ambos lugares) en vez de replicar esa inconsistencia interna de la
+  plantilla.
+- El título "Implementación de métodos multicriterio para la evaluación de
+  licitaciones" se repite en bloque centrado al inicio del cuerpo (antes de
+  la sección 1), replicando el patrón visual de la página 3 de
+  `ptfg_ieee.pdf`; como no hay `.tex` fuente, no se puede confirmar si allí
+  se usaba `\chapter*` de la clase `report`, un `\section*` especial, u otro
+  mecanismo. Se implementó como un bloque de texto centrado simple, visualmente
+  equivalente.
+
 ## Regeneración (segunda pasada) — hipótesis final, "métodos" en plural, objetivo 6 rediseñado
 
 Motivo: el contenido de `trabajo/anteproyecto_borrador.md` incorporó todos los

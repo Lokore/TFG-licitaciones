@@ -172,13 +172,13 @@ La contratación pública representa una parte significativa del gasto estatal: 
 
 **Impacto institucional.** Antes del proyecto, reconstruir una evaluación puede requerir reunir documentos de distintas fuentes y repetir cálculos cuyos parámetros no siempre quedan registrados junto con los resultados. Después del proyecto, las dependencias responsables de las contrataciones podrán contar con una referencia tecnológica para organizar y revisar la información utilizada en la evaluación: el registro de criterios, ponderaciones, evidencias y resultados intermedios facilitará la reconstrucción del procedimiento y la comprobación de los cálculos. Los procesos de contratación registrados digitalmente favorecen el seguimiento bajo estándares de auditoría [12], y especificar el modelo completo de evaluación, incluidas sus reglas de puntuación, hace comprensible la valoración de las ofertas [8].
 
-La investigación también proporcionará evidencia sobre las posibilidades y limitaciones de automatizar las reglas de los pliegos en los casos seleccionados. La corrección de los cálculos, su reproducibilidad y la trazabilidad de los resultados constituirán elementos para valorar una futura adaptación del prototipo web a procedimientos institucionales. Su contribución se concentrará en apoyar la evaluación de ofertas; la decisión administrativa de adjudicación continuará correspondiendo a las autoridades competentes.
+La investigación también proporcionará evidencia sobre las posibilidades y limitaciones de automatizar las reglas de los pliegos en los casos seleccionados. La correcta aplicación de los métodos, la reproducibilidad de los cálculos y la trazabilidad de los resultados constituirán elementos para valorar una futura adaptación del prototipo web a procedimientos institucionales. Su contribución se concentrará en apoyar la evaluación de ofertas; la decisión administrativa de adjudicación continuará correspondiendo a las autoridades competentes.
 
 **Impacto social.** Antes del proyecto, los oferentes y la ciudadanía pueden conocer el resultado de la adjudicación y los porcentajes asignados a los criterios, información que por sí sola no describe el modelo completo de evaluación [8]. Después del proyecto, la vinculación entre la información presentada, los criterios del pliego y las puntuaciones obtenidas podrá contribuir a explicar cómo se construye la clasificación de las ofertas, de modo que sus fundamentos puedan identificarse y verificarse con mayor facilidad. En una eventual aplicación institucional, esta capacidad podría facilitar la rendición de cuentas y la revisión de las decisiones, dentro de las condiciones de acceso a la información correspondientes, sin atribuir al prototipo web una eliminación automática de la discrecionalidad o de las irregularidades.
 
-**Impacto en la comunidad de investigación.** Antes del proyecto, los antecedentes revisados ofrecen orientaciones generales para seleccionar métodos según las necesidades de la decisión [13], [10], pero no una comparación documentada de métodos multicriterio aplicada a las contrataciones paraguayas (véase el apartado 7.2). Después del proyecto, los estudiantes, docentes e investigadores interesados en análisis de decisiones y sistemas de información dispondrán de esa comparación documentada, y la justificación de la elección permitirá reconocer qué características del problema, datos y supuestos respaldan la utilización del método seleccionado.
+**Impacto en la comunidad de investigación.** Antes del proyecto, los antecedentes revisados ofrecen orientaciones generales para seleccionar métodos según las necesidades de la decisión [13], [10], pero no una comparación documentada de métodos multicriterio aplicada a las contrataciones paraguayas (véase el apartado 7.2). Después del proyecto, los estudiantes, docentes e investigadores interesados en análisis de decisiones y sistemas de información dispondrán de esa comparación documentada, y la justificación de la elección permitirá reconocer qué características del problema, datos y supuestos respaldan la utilización de los métodos seleccionados.
 
-Además, el estudio aportará casos reconstruidos a partir de documentación pública, escenarios controlados y comprobaciones de las propiedades del procedimiento elegido. Estos materiales, junto con el prototipo web y los resultados de su evaluación, podrán servir como referencia para futuras investigaciones sobre automatización, reproducibilidad y trazabilidad. Su utilidad consistirá en ofrecer un procedimiento documentado que otros investigadores puedan examinar, reproducir o adaptar.
+Además, el estudio aportará casos reconstruidos a partir de documentación pública, escenarios controlados y comprobaciones de las propiedades de los procedimientos elegidos. Estos materiales, junto con el prototipo web y los resultados de su evaluación, podrán servir como referencia para futuras investigaciones sobre automatización, reproducibilidad y trazabilidad. Su utilidad consistirá en ofrecer un procedimiento documentado que otros investigadores puedan examinar, reproducir o adaptar.
 
 El impacto se evaluará dentro del alcance académico del proyecto, utilizando casos con adjudicaciones publicadas durante el periodo 2023–2026. Los beneficios institucionales y sociales más amplios dependerán de una posterior adaptación y validación del prototipo web en condiciones reales de uso.
 
@@ -357,7 +357,7 @@ En [13] se ofrecen orientaciones para relacionar métodos y problemas, y en [11]
 La disponibilidad documental constituye una condición previa. Un método que exige juicios no registrados, umbrales sin fundamento o características ausentes de las ofertas no adquiere viabilidad porque su cálculo sea sencillo. Esta dificultad afecta de formas distintas a todos los enfoques: AHP necesita justificar comparaciones; ELECTRE y PROMETHEE, umbrales o funciones de preferencia; VIKOR, su compromiso; TOPSIS, la ponderación y la geometría; MOORA, la normalización y el tratamiento de los pesos; y MAVT, las funciones de valor y las compensaciones. Ninguno elimina la necesidad de información preferencial.
 
 <!-- Referencia cruzada actualizada por la reestructuración de 8.1 (antes: "apartado 8.1.4"). -->
-Desde la finalidad de interpretar compensaciones y formular propiedades demostrables, MAVT aditivo se perfila como el candidato con la correspondencia teórica más directa entre los modelos examinados; esta apreciación constituye una hipótesis de trabajo que deberá contrastarse en la comparación prevista en los apartados 8.1.4 y 8.1.5. Los desarrollos sobre UTA [15] y sobre regresión ordinal robusta [20] fortalecen esa correspondencia. Esta valoración es condicional: pierde fuerza si la evidencia exige interacciones que la suma no representa, si la compensación resulta improcedente o si los registros no contienen alternativas y atributos suficientes. No equivale a demostrar superioridad empírica ni a fijar todavía el método de aplicación.
+Desde la finalidad de interpretar compensaciones y formular propiedades demostrables, MAVT aditivo se perfila como el candidato con la correspondencia teórica más directa entre los modelos examinados; esta apreciación constituye una hipótesis de trabajo que deberá contrastarse en la comparación prevista en los apartados 8.1.4 y 8.1.5. Los desarrollos sobre UTA [15] y sobre regresión ordinal robusta [20] fortalecen esa correspondencia. Esta valoración es condicional: pierde fuerza si la evidencia exige interacciones que la suma no representa, si la compensación resulta improcedente o si los registros no contienen alternativas y atributos suficientes. No equivale a demostrar superioridad empírica ni a fijar todavía los métodos que se implementarán.
 
 TOPSIS y VIKOR aportan un contraste relevante sobre el significado de aproximarse a una solución ideal; MOORA, sobre el efecto de normalizar los desempeños respecto del conjunto de ofertas. ELECTRE y PROMETHEE permiten examinar si las diferencias entre ofertas requieren relaciones de preferencia y límites a la compensación. AHP resulta especialmente pertinente para estudiar la estructuración y obtención explícita de juicios. Así, el valor de la comparación reside en identificar qué supuestos explican las diferencias de resultado y cuáles pueden sostenerse documentalmente, antes de considerar la coincidencia con el adjudicatario como criterio de adecuación.
 
@@ -438,7 +438,7 @@ El artículo “Expressiveness and robustness measures for the evaluation of an 
 
 ### Tipo de investigación
 
-La investigación será de carácter aplicada, ya que buscará dar respuesta a un problema concreto de la evaluación de ofertas en contrataciones de distintos sectores realizadas en Paraguay. Para ello, se examinarán métodos de decisión multicriterio existentes, se seleccionará el que resulte más adecuado a los requisitos y reglas identificados y se implementará en un prototipo web. El propósito no será formular una nueva teoría de decisión, sino aplicar y contrastar conocimientos disponibles para desarrollar una herramienta de apoyo a la evaluación.
+La investigación será de carácter aplicada, ya que buscará dar respuesta a un problema concreto de la evaluación de ofertas en contrataciones de distintos sectores realizadas en Paraguay. Para ello, se examinarán métodos de decisión multicriterio existentes, se seleccionarán los que resulten más adecuados a los requisitos y reglas identificados y se implementarán en un prototipo web. El propósito no será formular una nueva teoría de decisión, sino aplicar y contrastar conocimientos disponibles para desarrollar una herramienta de apoyo a la evaluación.
 
 El trabajo incorporará un componente de investigación y desarrollo tecnológico (I+D), puesto que comprenderá la definición de requerimientos, el diseño, la implementación y la verificación del prototipo web. Este permitirá registrar ofertas, criterios, ponderaciones y evidencias documentales, aplicar las reglas de puntuación correspondientes y consultar los fundamentos de cada resultado, sin realizar adjudicaciones automáticas.
 
@@ -448,23 +448,25 @@ Por su alcance, el estudio será descriptivo y comparativo: describirá los proc
 ### Enfoque de la investigación
 
 <!-- GB15 aplicado: texto sintetizado acordado por el equipo. -->
-Se adoptará un enfoque cuantitativo, dado que la comparación de los métodos y la evaluación del prototipo web se basarán en indicadores numéricos definidos antes de las mediciones: tiempo de evaluación, errores de cálculo, trazabilidad, corrección y reproducibilidad de los resultados (véase el apartado 8.3). La revisión de pliegos, informes y resoluciones se realizará mediante categorías fijadas de antemano, por lo que no altera el carácter cuantitativo del enfoque. Las conclusiones se limitarán a los casos seleccionados y a las condiciones de las pruebas.
+Se adoptará un enfoque cuantitativo, dado que la comparación de los métodos y la evaluación del prototipo web se basarán en indicadores numéricos definidos antes de las mediciones: tiempo de evaluación, errores de cálculo, trazabilidad, correcta aplicación de los métodos, reproducibilidad de los resultados y valoración de evaluadores expertos en escala ordinal (véase el apartado 8.3). La revisión de pliegos, informes y resoluciones se realizará mediante categorías fijadas de antemano, por lo que no altera el carácter cuantitativo del enfoque. Las conclusiones se limitarán a los casos seleccionados y a las condiciones de las pruebas.
 
 ## 8.1. Especificaciones de diseño
 
-<!-- GB16 aplicado: se fusionaron la antigua 8.1 (Especificaciones de diseño) y la antigua 8.2 (Lista de tareas). Cada fase se presenta en un único apartado con su descripción seguida de sus tareas (GB18: 41 tareas). -->
+<!-- GB16 aplicado: se fusionaron la antigua 8.1 (Especificaciones de diseño) y la antigua 8.2 (Lista de tareas). Cada fase se presenta en un único apartado con su descripción seguida de sus tareas (GB18: 41 tareas; 43 tras incorporar las tareas 8.4 y 9.5 de validación de expertos). -->
 
 ### 8.1.1. Diseño de la investigación
 
 El estudio integrará un componente documental retrospectivo, de carácter no experimental, y un componente de desarrollo y evaluación tecnológica. En el primero se examinarán documentos de procedimientos con adjudicaciones publicadas durante el periodo 2023–2026, sin modificar sus datos ni las condiciones bajo las cuales se realizaron.
 
-En el componente de evaluación se establecerá una comparación controlada de medidas repetidas: cada evaluador realizará las mismas tareas mediante el procedimiento manual y mediante el prototipo web, utilizando iguales datos y reglas. La modalidad de evaluación constituirá el factor de comparación, mientras que el tiempo, los errores de cálculo y la trazabilidad serán los resultados observados.
+En el componente de evaluación se establecerá una comparación controlada de medidas repetidas: cada investigador realizará las mismas tareas mediante el procedimiento manual y mediante el prototipo web, utilizando iguales datos y reglas. La modalidad de evaluación constituirá el factor de comparación, mientras que el tiempo, los errores de cálculo y la trazabilidad serán los resultados observados.
 
 La consulta de registros correspondientes a varios años no implicará un seguimiento longitudinal de instituciones u oferentes. El periodo delimitará la procedencia de los casos, y las pruebas del prototipo web se realizarán durante una etapa específica del proyecto. Se registrará la fecha de cierre de la recopilación para precisar la cobertura efectiva de 2026.
 
-El trabajo se organizará en diez fases secuenciales, definidas a partir de los objetivos específicos y representadas en la Figura 1. Las Fases 1 y 2 corresponden al componente documental: selección de los casos y extracción de sus datos y reglas de evaluación. Las Fases 3 y 4 comprenden la comparación de los métodos multicriterio y la selección del procedimiento que se implementará. Las Fases 5, 6 y 7 abarcan la especificación del procedimiento y del prototipo web, la definición de sus herramientas y su desarrollo y verificación. Las Fases 8, 9 y 10 corresponden a la evaluación comparativa entre la modalidad manual y la automatizada y al análisis de sus resultados. Las correcciones detectadas durante la ejecución de las pruebas podrán requerir el retorno a la Fase 7 y la repetición de las pruebas afectadas. Cada fase se describe, junto con sus tareas, en los apartados 8.1.2 a 8.1.11, y su relación con los objetivos específicos se presenta en la Tabla 2.
+El trabajo se organizará en diez fases secuenciales, definidas a partir de los objetivos específicos y representadas en la Figura 1. Las Fases 1 y 2 corresponden al componente documental: selección de los casos y extracción de sus datos y reglas de evaluación. Las Fases 3 y 4 comprenden la comparación de los métodos multicriterio y la selección de los procedimientos que se implementarán. Las Fases 5, 6 y 7 abarcan la especificación del procedimiento y del prototipo web, la definición de sus herramientas y su desarrollo y verificación. Las Fases 8, 9 y 10 corresponden a la evaluación comparativa entre la modalidad manual y la automatizada y al análisis de sus resultados. Las correcciones detectadas durante la ejecución de las pruebas podrán requerir el retorno a la Fase 7 y la repetición de las pruebas afectadas. Cada fase se describe, junto con sus tareas, en los apartados 8.1.2 a 8.1.11, y su relación con los objetivos específicos se presenta en la Tabla 2.
 
-<!-- FIGURA 1: ARCHIVO CORRECTO = trabajo/img/figura2.png (NO figura_fases.png, que muestra 5 fases, tareas 1-7 y H1-H3 de una versión anterior). Diagrama de flujo de las fases del trabajo. Reutilizar el diagrama que en el original figuraba como "Figura 2: Diagrama de flujo de las tareas del trabajo" (p. 36 del PDF): Inicio -> 1. Recopilación y caracterización de los casos de estudio -> 2. Extracción y verificación de los datos y las reglas -> 3. Definición de la comparación metodológica -> 4. Comparación y selección del método -> 5. Especificación del procedimiento y del prototipo web -> 6. Definición de las herramientas del prototipo web -> 7. Desarrollo y verificación del prototipo web -> 8. Preparación de la evaluación comparativa -> 9. Ejecución de las pruebas -> 10. Análisis y documentación de los resultados -> Fin; con un lazo de retorno desde 9 hacia 7 rotulado "correcciones: repetición de las pruebas afectadas". GB17 aplicado. -->
+<!-- FIGURA 1: ARCHIVO CORRECTO = trabajo/img/figura2.png (NO figura_fases.png, que muestra 5 fases, tareas 1-7 y H1-H3 de una versión anterior). Diagrama de flujo de las fases del trabajo. Reutilizar el diagrama que en el original figuraba como "Figura 2: Diagrama de flujo de las tareas del trabajo" (p. 36 del PDF): Inicio -> 1. Recopilación y caracterización de los casos de estudio -> 2. Extracción y verificación de los datos y las reglas -> 3. Definición de la comparación metodológica -> 4. Comparación y selección de los métodos -> 5. Especificación del procedimiento y del prototipo web -> 6. Definición de las herramientas del prototipo web -> 7. Desarrollo y verificación del prototipo web -> 8. Preparación de la evaluación comparativa -> 9. Ejecución de las pruebas -> 10. Análisis y documentación de los resultados -> Fin; con un lazo de retorno desde 9 hacia 7 rotulado "correcciones: repetición de las pruebas afectadas". GB17 aplicado. -->
+
+<!-- PENDIENTE (imagen): el rótulo de la caja 4 en trabajo/img/figura2.png dice "Comparación y selección del método" (singular). Debe actualizarse en la imagen a "Comparación y selección de los métodos" para coincidir con el título de la Fase 4, el índice y la Tabla 1. No se puede editar desde este archivo de texto. -->
 
 Figura 1: Diagrama de flujo de las fases del trabajo.
 
@@ -486,7 +488,7 @@ La existencia de varios requisitos técnicos obligatorios no se interpretará, p
 
 Se utilizarán pliegos de bases y condiciones, adendas, actas de apertura, información pública de las ofertas, informes de evaluación y resoluciones de adjudicación. Los documentos se organizarán por procedimiento y se conservará su identificación, procedencia y fecha de consulta. La recopilación se realizará mediante una ficha documental, que registrará la institución, el identificador del llamado, el objeto de contratación, las fechas y los documentos disponibles.
 
-Se elaborará un registro de los casos examinados, incluidos y excluidos, con sus respectivos motivos. La cantidad definitiva de casos se establecerá después de la revisión documental y antes de las pruebas, considerando la disponibilidad de información y los recursos del proyecto. Si no se obtuvieran casos suficientes, se informará esta limitación; los escenarios simulados no se presentarán como evidencia de contrataciones reales.
+Se elaborará un registro de los casos examinados, incluidos y excluidos, con sus respectivos motivos. La cantidad definitiva de casos se establecerá después de la revisión documental y antes de las pruebas, considerando la disponibilidad de información y los recursos del proyecto. Si no se obtuvieran casos suficientes, se informará esta limitación; los escenarios controlados no se presentarán como evidencia de contrataciones reales.
 
 **Tareas:**
 
@@ -533,7 +535,7 @@ Cada valoración se respaldará mediante documentación de los casos, bibliograf
 - **3.2.** Elección de los métodos candidatos, con la justificación de su inclusión y la especificación de la variante concreta de cada uno.
 - **3.3.** Elaboración de la matriz de comparación con los criterios establecidos.
 
-### 8.1.5. Fase 4: Comparación y selección del método
+### 8.1.5. Fase 4: Comparación y selección de los métodos
 
 Cuando exista información suficiente, se realizarán aplicaciones numéricas para examinar el comportamiento de los métodos. Los parámetros que no puedan justificarse con la documentación se identificarán como supuestos de escenarios controlados y no como reglas de la contratación estudiada.
 
@@ -543,17 +545,17 @@ La selección se fundamentará en la adecuación al problema y en las propiedade
 
 - **4.1.** Llenado de la matriz de comparación para los métodos candidatos, respaldando cada valoración con su fuente, y clasificación de la compatibilidad de cada método con los datos disponibles como compatible, incompatible o no determinable.
 - **4.2.** Realización de aplicaciones numéricas con los casos de información suficiente para examinar el comportamiento de los métodos.
-- **4.3.** Selección del método y redacción de su justificación a partir de la adecuación al problema y de las propiedades verificadas.
+- **4.3.** Selección de los métodos y justificación de cada uno a partir de la adecuación al problema y de las propiedades verificadas.
 
 ### 8.1.6. Fase 5: Especificación del procedimiento y del prototipo web
 
-Se definirán las entradas, las transformaciones, las funciones de puntuación, la agregación de resultados y las condiciones de desempate del procedimiento seleccionado. También se establecerán la precisión numérica y las reglas de redondeo.
+Se definirán las entradas, las transformaciones, las funciones de puntuación, la agregación de resultados y las condiciones de desempate de cada procedimiento seleccionado. También se establecerán la precisión numérica y las reglas de redondeo.
 
 Se examinarán la monotonía ante mejoras en los criterios, el tratamiento de ofertas dominadas, la invariancia frente al orden de ingreso y el comportamiento del ordenamiento al incorporar o retirar alternativas no ganadoras. Para cada propiedad se explicitarán los supuestos bajo los cuales se espera su cumplimiento. Asimismo, se realizará un análisis de sensibilidad de las clasificaciones ante variaciones de las ponderaciones y de los parámetros, distinguiendo los valores documentados en los pliegos de los supuestos de escenarios controlados.
 
 Las afirmaciones generales se sustentarán mediante demostraciones o se refutarán mediante contraejemplos. Las pruebas numéricas servirán para comprobar situaciones particulares y detectar errores de implementación. Los resultados se registrarán como propiedades demostradas bajo condiciones explícitas, refutadas o pendientes de justificación.
 
-El prototipo web permitirá registrar los casos y las ofertas, distinguir requisitos obligatorios de criterios puntuables, configurar las reglas documentadas, ejecutar el método seleccionado y consultar la clasificación resultante. También permitirá examinar los valores intermedios y las evidencias asociadas a cada resultado.
+El prototipo web permitirá registrar los casos y las ofertas, distinguir requisitos obligatorios de criterios puntuables, configurar las reglas documentadas, ejecutar los métodos seleccionados y consultar la clasificación resultante. También permitirá examinar los valores intermedios y las evidencias asociadas a cada resultado.
 
 Se utilizará una arquitectura cliente-servidor con separación entre presentación, lógica de evaluación y almacenamiento. La interfaz gestionará la interacción con el usuario; la lógica de evaluación aplicará las reglas y los cálculos; y la capa de almacenamiento conservará los datos y las ejecuciones. Esta separación permitirá verificar el motor de cálculo de forma independiente de la interfaz. La Figura 2 presenta el diagrama funcional del prototipo web.
 
@@ -569,9 +571,9 @@ La pantalla de resultados mostrará las puntuaciones parciales, el resultado glo
 
 **Tareas:**
 
-- **5.1.** Definición del procedimiento del método seleccionado: entradas, transformaciones, funciones de puntuación, agregación, condiciones de desempate, precisión numérica y reglas de redondeo.
+- **5.1.** Definición del procedimiento de cada método seleccionado: entradas, transformaciones, funciones de puntuación, agregación, condiciones de desempate, precisión numérica y reglas de redondeo.
 - **5.2.** Formulación de las propiedades a verificar y de sus supuestos, demostración o refutación de cada una mediante contraejemplos y registro de su estado (demostrada bajo condiciones explícitas, refutada o pendiente de justificación).
-- **5.3.** Análisis de sensibilidad de las clasificaciones ante variaciones de las ponderaciones y de los parámetros del método seleccionado.
+- **5.3.** Análisis de sensibilidad de las clasificaciones ante variaciones de las ponderaciones y de los parámetros de cada método seleccionado.
 - **5.4.** Definición de los requerimientos del prototipo web.
 - **5.5.** Diseño de la arquitectura cliente-servidor, con separación entre presentación, lógica de evaluación y almacenamiento.
 - **5.6.** Diseño de la base de datos y del registro de cada ejecución con sus datos, parámetros, fecha y versión del prototipo web.
@@ -608,21 +610,28 @@ La interacción se revisará mediante tareas de registro, corrección y consulta
 
 ### 8.1.9. Fase 8: Preparación de la evaluación comparativa
 
-Se propone que los dos investigadores ejecuten ambas modalidades. La modalidad manual utilizará una ficha de evaluación y una calculadora básica; la automatizada empleará el prototipo web. Ambas exigirán los mismos resultados y el mismo nivel de documentación.
+El conjunto de prueba comprenderá los casos reconstruidos en las Fases 1 y 2 y escenarios controlados, identificados como tales, diseñados para examinar situaciones que los casos no presenten, como empates, valores límite o la incorporación y el retiro de ofertas no ganadoras. La comparación entre la modalidad manual y la automatizada, en tiempo de evaluación y errores de cálculo, se realizará con los casos reconstruidos; la correcta aplicación de los métodos implementados y la reproducibilidad de los cálculos se verificarán con ambos tipos de prueba.
+
+Se propone que los dos investigadores ejecuten ambas modalidades. La modalidad manual utilizará una ficha de evaluación y una calculadora básica; la automatizada empleará el prototipo web. Ambas exigirán los mismos resultados y el mismo nivel de documentación. En la comparación manual–automatizada, cada caso se evaluará con un único método, el que, según la comparación de la Fase 4, mejor represente las reglas de su pliego, y ambas modalidades aplicarán ese mismo método con las mismas reglas; esta asignación se registrará antes de las pruebas. Las comprobaciones de correcta aplicación y de reproducibilidad, en cambio, se realizarán con cada uno de los métodos seleccionados.
 
 Se realizará una práctica previa con un caso ajeno al conjunto de medición. El orden de las modalidades se alternará entre investigadores y casos, procurando equilibrar las secuencias manual–automatizada y automatizada–manual. Durante la segunda ejecución no se consultarán las respuestas de la primera.
 
 El tiempo se medirá desde la entrega del conjunto de datos verificados hasta la obtención de la clasificación y el registro de sus fundamentos. Se incluirán la carga o transcripción de datos y las correcciones realizadas durante la tarea. La búsqueda documental y la preparación previa de los casos quedarán fuera de ambas mediciones.
 
-Antes de iniciar las pruebas se establecerán el número de casos, las sesiones, las repeticiones y su distribución. Las repeticiones se identificarán como observaciones de un mismo caso y evaluador, evitando tratarlas como casos independientes.
+Antes de iniciar las pruebas se establecerán el número de casos y escenarios controlados, las sesiones, las repeticiones y su distribución. Las repeticiones se identificarán como observaciones de un mismo caso e investigador, evitando tratarlas como casos independientes.
+
+Para la reproducibilidad, en cada caso o escenario y con cada método seleccionado se obtendrán dos pares de ejecuciones: cada investigador realizará una ejecución original en el prototipo web y el otro investigador la reejecutará una vez, en una sesión posterior, a partir del registro guardado de esa ejecución (datos, parámetros y versión del prototipo web), sin volver a ingresar los datos.
+
+La valoración por evaluadores expertos complementará las mediciones anteriores. Se convocará a evaluadores con experiencia en licitaciones públicas, externos al equipo de desarrollo, y se elaborará un cuestionario con escala Likert de 1 a 5 organizado en tres dimensiones: fidelidad de las reglas implementadas respecto de los pliegos, comprensión de la trazabilidad de los resultados y utilidad percibida del prototipo web. Las respuestas se registrarán sin datos que permitan identificar a los evaluadores.
 
 Antes de la comparación manual–automatizada se fijarán la versión del prototipo web, los casos, los resultados de referencia y los instrumentos de medición. Las correcciones posteriores se documentarán y requerirán repetir las pruebas afectadas.
 
 **Tareas:**
 
-- **8.1.** Establecimiento del número de casos, las sesiones, las repeticiones y su distribución.
+- **8.1.** Establecimiento del número de casos reconstruidos y escenarios controlados, las sesiones, las repeticiones y su distribución; asignación a cada caso del método con el que se realizará la comparación manual–automatizada; y fijación de las reejecuciones para la reproducibilidad: una reejecución de cada ejecución original, a cargo del otro investigador, lo que da dos pares de ejecuciones por caso o escenario y por método seleccionado.
 - **8.2.** Elaboración de los instrumentos: ficha de evaluación manual, registro de tiempos, registro de errores y lista de comprobación de trazabilidad.
 - **8.3.** Realización de una práctica previa con un caso ajeno al conjunto de medición y fijación de la versión del prototipo web, los casos, los resultados de referencia y los instrumentos.
+- **8.4.** Selección de evaluadores con experiencia en licitaciones públicas, externos al equipo, y diseño de un cuestionario con escala Likert de 1 a 5 sobre la fidelidad de las reglas implementadas, la comprensión de la trazabilidad y la utilidad percibida.
 
 ### 8.1.10. Fase 9: Ejecución de las pruebas
 
@@ -630,32 +639,35 @@ El tiempo de evaluación se registrará en minutos por caso y modalidad. Se regi
 
 La trazabilidad se examinará mediante una lista de comprobación común a ambas modalidades. Un resultado tendrá trazabilidad completa cuando permita identificar la oferta, el dato de entrada, la fuente, la regla y los parámetros utilizados, así como las operaciones necesarias para reconstruirlo. Se calculará la proporción de resultados que cumplan todos estos elementos.
 
-La corrección del prototipo web se expresará mediante la proporción de pruebas concordantes con la referencia. La reproducibilidad se comprobará repitiendo ejecuciones con los mismos datos, configuración y versión, y verificando la equivalencia de sus resultados.
+La correcta aplicación de los métodos implementados se expresará, para cada método, mediante la proporción de pruebas concordantes con los cálculos de referencia, con los casos reconstruidos y los escenarios controlados. La reproducibilidad se comprobará reejecutando cada ejecución original desde su registro guardado, en otra sesión y a cargo del otro investigador, conforme a lo establecido en la tarea 8.1. Dos ejecuciones se considerarán equivalentes cuando produzcan el mismo ordenamiento y las mismas puntuaciones parciales y globales, con la precisión numérica y las reglas de redondeo definidas en la tarea 5.1. Se calculará el porcentaje de pares equivalentes por método.
+
+Finalmente, se realizará una sesión de uso del prototipo web con uno o dos casos reconstruidos junto a los evaluadores expertos, quienes responderán el cuestionario elaborado en la tarea 8.4. Se registrarán sus valoraciones y observaciones sin datos que permitan identificarlos.
 
 **Tareas:**
 
-- **9.1.** Ejecución de cada caso en ambas modalidades, con registro del tiempo de evaluación, del tiempo de procesamiento del prototipo web y de la trazabilidad de cada ejecución.
+- **9.1.** Ejecución de cada caso reconstruido en ambas modalidades, con el método asignado en la tarea 8.1, y registro del tiempo de evaluación, del tiempo de procesamiento del prototipo web y de la trazabilidad de cada ejecución.
 - **9.2.** Contraste de los resultados numéricos con los valores de referencia y recuento de los errores de cálculo.
-- **9.3.** Comprobación de la corrección del prototipo web.
-- **9.4.** Comprobación de la reproducibilidad mediante la repetición de ejecuciones.
+- **9.3.** Comprobación de la correcta aplicación de cada método implementado mediante el contraste con los cálculos de referencia, con los casos reconstruidos y los escenarios controlados.
+- **9.4.** Comprobación de la reproducibilidad: reejecución de cada ejecución original desde su registro guardado, en otra sesión y a cargo del otro investigador, y verificación de la equivalencia de cada par (mismo ordenamiento y mismas puntuaciones parciales y globales, con la precisión y el redondeo de la tarea 5.1), por método.
+- **9.5.** Sesión de uso del prototipo web con uno o dos casos reconstruidos junto a los evaluadores expertos, aplicación del cuestionario y registro de sus observaciones.
 
 ### 8.1.11. Fase 10: Análisis y documentación de los resultados
 
-El análisis será descriptivo y comparativo. Se presentarán conteos, porcentajes, medianas, rangos y diferencias por pares correspondientes al mismo caso y evaluador. Las reducciones relativas se calcularán únicamente cuando el valor de la modalidad manual sea mayor que cero. Las diferencias de trazabilidad se expresarán en puntos porcentuales.
+El análisis será descriptivo y comparativo. Se presentarán conteos, porcentajes, medianas, rangos y diferencias por pares correspondientes al mismo caso e investigador. Las reducciones relativas se calcularán únicamente cuando el valor de la modalidad manual sea mayor que cero. Las diferencias de trazabilidad se expresarán en puntos porcentuales. La correcta aplicación y la reproducibilidad se informarán por método. La valoración de los evaluadores expertos se resumirá mediante la mediana por dimensión y el porcentaje de ítems con valoración igual o superior a 4, acompañados de sus observaciones cualitativas, sin datos que permitan identificar a los evaluadores.
 
-Los componentes de la hipótesis se examinarán por separado. Una disminución del tiempo no se interpretará como evidencia de reducción de errores, y la ausencia de errores en ambas modalidades indicará igualdad en esa medición. Los casos documentados y los escenarios simulados se analizarán separadamente. Asimismo, los casos procedentes de la DNCP y del PTI se presentarán por separado, debido a que responden a regímenes normativos distintos.
+Los componentes de la hipótesis se examinarán por separado. Una disminución del tiempo no se interpretará como evidencia de reducción de errores, y la ausencia de errores en ambas modalidades indicará igualdad en esa medición. Los casos reconstruidos y los escenarios controlados se analizarán separadamente. Asimismo, los casos procedentes de la DNCP y del PTI se presentarán por separado, debido a que responden a regímenes normativos distintos.
 
 Las conclusiones considerarán el número de casos, su selección intencional, el aprendizaje y la participación de los propios desarrolladores. Los resultados permitirán valorar el prototipo web en las condiciones estudiadas, sin extrapolar directamente su desempeño al de los comités evaluadores de las instituciones públicas.
 
 **Tareas:**
 
-- **10.1.** Cálculo de las medidas descriptivas y de las diferencias por pares entre modalidades.
+- **10.1.** Cálculo de las medidas descriptivas, de las diferencias por pares entre modalidades, de los indicadores de correcta aplicación y reproducibilidad por método y del resumen de la valoración de los evaluadores expertos.
 - **10.2.** Contraste de cada componente de la hipótesis con los resultados obtenidos.
 - **10.3.** Descripción de las limitaciones y redacción de los resultados, los alcances y las conclusiones.
 
 ## 8.2. Cronograma de tareas
 
-<!-- GB18 aplicado: el cronograma contiene las mismas 41 tareas de los apartados 8.1.2 a 8.1.11, agrupadas por fase, con columnas por mes. La asignación mensual de cada tarea se derivó de las quincenas asignadas a cada fase en el cronograma original; debe ser confirmada por los autores. -->
+<!-- GB18 aplicado: el cronograma contiene las mismas 43 tareas (41 originales más 8.4 y 9.5) de los apartados 8.1.2 a 8.1.11, agrupadas por fase, con columnas por mes. La asignación mensual de cada tarea se derivó de las quincenas asignadas a cada fase en el cronograma original; debe ser confirmada por los autores. -->
 
 Las tareas descritas en los apartados 8.1.2 a 8.1.11, cuya secuencia por fases se representa en la Figura 1, se distribuyen en el cronograma de la Tabla 1.
 
@@ -678,12 +690,12 @@ Tabla 1: Cronograma de tareas.
 | 3.1. Revisión de los métodos frente a los casos | | X | | | | | | |
 | 3.2. Elección de los métodos candidatos y sus variantes | | X | | | | | | |
 | 3.3. Elaboración de la matriz de comparación | | | X | | | | | |
-| **4. Comparación y selección del método** | | | **X** | **X** | | | | |
+| **4. Comparación y selección de los métodos** | | | **X** | **X** | | | | |
 | 4.1. Llenado de la matriz y clasificación de compatibilidad | | | X | | | | | |
 | 4.2. Aplicaciones numéricas | | | X | X | | | | |
-| 4.3. Selección y justificación del método | | | | X | | | | |
+| 4.3. Selección de los métodos y justificación de cada uno | | | | X | | | | |
 | **5. Especificación del procedimiento y del prototipo web** | | | | **X** | | | | |
-| 5.1. Definición del procedimiento del método | | | | X | | | | |
+| 5.1. Definición del procedimiento de cada método seleccionado | | | | X | | | | |
 | 5.2. Propiedades: formulación, demostración o refutación | | | | X | | | | |
 | 5.3. Análisis de sensibilidad | | | | X | | | | |
 | 5.4. Requerimientos del prototipo web | | | | X | | | | |
@@ -702,14 +714,16 @@ Tabla 1: Cronograma de tareas.
 | 7.5. Pruebas unitarias, de integración y funcionales | | | | | X | X | | |
 | 7.6. Revisión de la interacción | | | | | | X | | |
 | **8. Preparación de la evaluación comparativa** | | | | | | **X** | **X** | |
-| 8.1. Número de casos, sesiones y repeticiones | | | | | | X | | |
+| 8.1. Casos y escenarios, sesiones, repeticiones, método por caso y reejecuciones | | | | | | X | | |
 | 8.2. Elaboración de los instrumentos | | | | | | X | | |
 | 8.3. Práctica previa y fijación de versión, casos e instrumentos | | | | | | | X | |
+| 8.4. Selección de expertos y diseño del cuestionario Likert | | | | | | | X | |
 | **9. Ejecución de las pruebas** | | | | | | | **X** | |
 | 9.1. Ejecución de los casos en ambas modalidades | | | | | | | X | |
 | 9.2. Contraste con la referencia y recuento de errores | | | | | | | X | |
-| 9.3. Comprobación de la corrección | | | | | | | X | |
-| 9.4. Comprobación de la reproducibilidad | | | | | | | X | |
+| 9.3. Comprobación de la correcta aplicación de los métodos | | | | | | | X | |
+| 9.4. Comprobación de la reproducibilidad por método | | | | | | | X | |
+| 9.5. Sesión de uso del prototipo web con los expertos | | | | | | | X | |
 | **10. Análisis y documentación de los resultados** | | | | | | | **X** | **X** |
 | 10.1. Medidas descriptivas y diferencias por pares | | | | | | | X | X |
 | 10.2. Contraste de los componentes de la hipótesis | | | | | | | | X |
@@ -719,15 +733,15 @@ Tabla 1: Cronograma de tareas.
 
 1. **Completitud documental de las licitaciones:** Grado en que los documentos de cada caso permiten reconstruir su evaluación. Indicador: cantidad y porcentaje de casos revisados con información suficiente (pliego, datos de las ofertas, informe de evaluación y adjudicación).
 2. **Parámetros y reglas de evaluación:** Requisitos obligatorios, criterios, escalas, reglas de puntuación y ponderaciones documentados en cada caso. Indicador: tipo y cantidad de requisitos y criterios, escalas y reglas registradas, con la fuente documental de cada elemento.
-3. **Compatibilidad y comportamiento del método multicriterio:** Correspondencia del método con las reglas de los pliegos, los datos disponibles y las propiedades exigidas. Indicador: compatibilidad con los datos (compatible, incompatible o no determinable) y estado de cada propiedad (demostrada bajo supuestos, refutada o pendiente).
+3. **Compatibilidad y comportamiento de los métodos multicriterio:** Correspondencia de cada método con las reglas de los pliegos, los datos disponibles y las propiedades exigidas. Indicador: compatibilidad con los datos (compatible, incompatible o no determinable) y estado de cada propiedad (demostrada bajo supuestos, refutada o pendiente).
 4. **Cobertura técnica de las herramientas:** Conjunto de lenguajes de programación, frameworks, gestor de base de datos y herramientas de prueba definidos para el desarrollo del prototipo web. Indicador: herramientas seleccionadas y documentadas con su justificación, y porcentaje de requisitos técnicos cubiertos por ellas.
 5. **Operatividad funcional del prototipo:** Grado en que el prototipo web realiza las funciones previstas de registro, cálculo y consulta. Indicador: porcentaje de funciones verificadas satisfactoriamente respecto de las previstas.
-6. **Precisión de los cálculos:** Concordancia de los resultados del prototipo web con cálculos de referencia elaborados de forma independiente. Indicador: porcentaje de pruebas concordantes con la referencia.
-7. **Consistencia de resultados (reproducibilidad):** Obtención de resultados equivalentes al repetir ejecuciones con los mismos datos, configuración y versión. Indicador: porcentaje de pares de ejecuciones con resultados equivalentes.
+6. **Correcta aplicación de los métodos:** Concordancia de los resultados del prototipo web, para cada método implementado, con cálculos de referencia elaborados de forma independiente, en casos reconstruidos y escenarios controlados. Indicador: porcentaje de pruebas concordantes con la referencia, por método.
+7. **Reproducibilidad de los resultados:** Obtención de resultados equivalentes al reejecutar cada ejecución original desde su registro guardado, en otra sesión y a cargo del otro investigador. Se consideran equivalentes dos ejecuciones con el mismo ordenamiento y las mismas puntuaciones parciales y globales, con la precisión numérica y las reglas de redondeo de la tarea 5.1. Indicador: porcentaje de pares equivalentes, por método.
 8. **Nivel de trazabilidad:** Posibilidad de identificar, para cada resultado, la oferta, el dato de entrada, la fuente, la regla, los parámetros y las operaciones utilizadas. Indicador: porcentaje de resultados con trazabilidad completa según la lista de comprobación común a ambas modalidades.
 9. **Duración de la evaluación:** Duración desde la entrega del conjunto de datos verificados hasta la obtención de la clasificación y el registro de sus fundamentos. Indicador: minutos por caso y modalidad.
 10. **Frecuencia de errores:** Discrepancias entre los resultados numéricos obtenidos y los valores de referencia. Indicador: cantidad y proporción de errores respecto del total revisado, por tipo (aritméticos, de transcripción y de configuración).
-11. **Validación de expertos:** Valoración del prototipo web por evaluadores ajenos al equipo de desarrollo, con experiencia en la selección de oferentes en el PTI. Indicador: pendiente de definición.
+11. **Validación de expertos:** Valoración del prototipo web por evaluadores con experiencia en licitaciones públicas, externos al equipo de desarrollo, mediante un cuestionario con escala Likert de 1 a 5 sobre la fidelidad de las reglas implementadas, la comprensión de la trazabilidad y la utilidad percibida. Indicador: mediana de valoración por dimensión (escala 1-5) y porcentaje de ítems con valoración ≥4, más observaciones cualitativas registradas.
 
 La Tabla 2 relaciona cada objetivo específico con sus tareas, variables e indicadores.
 
@@ -737,10 +751,10 @@ Tabla 2: Operacionalización de variables.
 |---|---|---|---|
 | 1. Identificar y seleccionar los casos de estudio de licitaciones públicas que cuenten con información documental suficiente para su reconstrucción. | Recopilación y caracterización de los casos de estudio (Fase 1, tareas 1.1 a 1.5). | Completitud documental de las licitaciones. | Cantidad y porcentaje de casos revisados con información suficiente: pliego, datos de las ofertas, informe de evaluación y adjudicación. |
 | 2. Identificar los requisitos obligatorios, criterios de evaluación, escalas, reglas de puntuación o ponderaciones, a partir de los documentos de los casos seleccionados. | Extracción y verificación de los datos y las reglas (Fase 2, tareas 2.1 a 2.4). | Parámetros y reglas de evaluación. | Tipo y cantidad de requisitos y criterios. Escalas y reglas de puntuación documentadas. Ponderaciones registradas, cuando correspondan. Fuente documental de cada elemento. |
-| 3. Comparar métodos de decisión multicriterio mediante su aplicación a los casos seleccionados, para justificar la elección de los más adecuados según los criterios de comparación establecidos. | Definición de la comparación metodológica; comparación y selección del método (Fases 3 y 4, tareas 3.1 a 4.3); especificación del procedimiento, propiedades y análisis de sensibilidad (Fase 5, tareas 5.1 a 5.3). | Compatibilidad y comportamiento del método multicriterio. | Compatibilidad con los datos disponibles: compatible, incompatible o no determinable. Propiedades examinadas: demostradas bajo supuestos, refutadas o pendientes. Método seleccionado y justificación. Análisis de sensibilidad: variación de las clasificaciones ante cambios en las ponderaciones y los parámetros. |
+| 3. Comparar métodos de decisión multicriterio mediante su aplicación a los casos seleccionados, para justificar la elección de los más adecuados según los criterios de comparación establecidos. | Definición de la comparación metodológica; comparación y selección de los métodos (Fases 3 y 4, tareas 3.1 a 4.3); especificación de los procedimientos, propiedades y análisis de sensibilidad (Fase 5, tareas 5.1 a 5.3). | Compatibilidad y comportamiento de los métodos multicriterio. | Compatibilidad con los datos disponibles: compatible, incompatible o no determinable. Propiedades examinadas: demostradas bajo supuestos, refutadas o pendientes. Métodos seleccionados y justificación. Análisis de sensibilidad: variación de las clasificaciones ante cambios en las ponderaciones y los parámetros. |
 | 4. Definir la arquitectura y las herramientas tecnológicas necesarias para el desarrollo del prototipo web de soporte a la decisión. | Requerimientos, arquitectura, base de datos e interfaz del prototipo web (Fase 5, tareas 5.4 a 5.7); definición de las herramientas del prototipo web (Fase 6, tareas 6.1 a 6.3). | Cobertura técnica de las herramientas. | Herramientas seleccionadas y documentadas con su justificación. Porcentaje de requisitos técnicos cubiertos por las herramientas seleccionadas. |
 | 5. Implementar un prototipo web para el apoyo a la toma de decisión en las licitaciones. | Desarrollo y verificación del prototipo web (Fase 7, tareas 7.1 a 7.6). | Operatividad funcional del prototipo. | Porcentaje de funciones verificadas satisfactoriamente respecto de las previstas: registro de ofertas, criterios, parámetros y evidencias; cálculo y consulta de resultados. |
-| 6. Evaluar el prototipo web mediante escenarios controlados, comprobando la correcta aplicación del método, la reproducibilidad de los cálculos, la trazabilidad de los resultados y validación de expertos. | Preparación de la evaluación comparativa; ejecución de las pruebas; análisis y documentación de los resultados (Fases 8 a 10, tareas 8.1 a 10.3). | Precisión de los cálculos. Consistencia de resultados (reproducibilidad). Nivel de trazabilidad. Duración de la evaluación. Frecuencia de errores. Validación de expertos. | Precisión: porcentaje de pruebas concordantes con el cálculo de referencia. Consistencia: porcentaje de pares de ejecuciones con resultados equivalentes bajo las mismas condiciones. Trazabilidad: porcentaje de resultados auditados vinculados a sus datos, fuentes, parámetros y reglas. Duración: minutos por caso y modalidad. Frecuencia de errores: cantidad y proporción por tipo. Validación de expertos: pendiente de definición con el profesor. |
+| 6. Evaluar el prototipo web con los casos reconstruidos y con escenarios controlados, verificando la correcta aplicación de los métodos implementados, la reproducibilidad de los cálculos y la trazabilidad de los resultados, y comparando el tiempo de evaluación y los errores de cálculo con la aplicación manual de las mismas reglas, con la valoración de evaluadores expertos ajenos al equipo. | Preparación de la evaluación comparativa y de la validación de expertos; ejecución de las pruebas y sesión de uso con los expertos; análisis y documentación de los resultados (Fases 8 a 10, tareas 8.1 a 10.3, incluidas 8.4 y 9.5). | Correcta aplicación de los métodos. Reproducibilidad de los resultados. Nivel de trazabilidad. Duración de la evaluación. Frecuencia de errores. Validación de expertos. | Correcta aplicación: porcentaje de pruebas concordantes con el cálculo de referencia, por método, en casos reconstruidos y escenarios controlados. Reproducibilidad: porcentaje de pares equivalentes, por método (reejecución desde el registro guardado, en otra sesión y a cargo del otro investigador; equivalencia: mismo ordenamiento y mismas puntuaciones parciales y globales, con la precisión y el redondeo de la tarea 5.1). Trazabilidad: porcentaje de resultados con trazabilidad completa según la lista de comprobación común a ambas modalidades. Duración: minutos por caso y modalidad. Frecuencia de errores: cantidad y proporción por tipo (aritméticos, de transcripción y de configuración). Validación de expertos: mediana de valoración por dimensión (escala 1-5) y porcentaje de ítems con valoración ≥4, más observaciones cualitativas registradas. |
 
 # Referencias bibliográficas
 

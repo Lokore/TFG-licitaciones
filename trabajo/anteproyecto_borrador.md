@@ -83,7 +83,7 @@ indzrs2015@gmail.com
      - 8.1.2. Fase 1: Recopilación y caracterización de los casos de estudio
      - 8.1.3. Fase 2: Extracción y verificación de los datos y las reglas
      - 8.1.4. Fase 3: Definición de la comparación metodológica
-     - 8.1.5. Fase 4: Comparación y selección del método
+     - 8.1.5. Fase 4: Comparación y selección de los métodos
      - 8.1.6. Fase 5: Especificación del procedimiento y del prototipo web
      - 8.1.7. Fase 6: Definición de las herramientas del prototipo web
      - 8.1.8. Fase 7: Desarrollo y verificación del prototipo web
@@ -97,7 +97,7 @@ Referencias bibliográficas
 
 ---
 
-**Implementación de un método multicriterio para la evaluación de licitaciones**
+**Implementación de métodos multicriterio para la evaluación de licitaciones**
 
 # 1. Definición del problema
 
@@ -117,7 +117,7 @@ A partir de esta problemática se plantean las siguientes preguntas de investiga
 
 1. ¿Cómo se estructuran los procedimientos de evaluación en los casos de estudio seleccionados y qué requisitos obligatorios, criterios, escalas de puntuación y ponderaciones deben representarse a partir de la información pública disponible?
 2. ¿Cuáles son los métodos de decisión multicriterio más apropiados para ser utilizados como herramienta de apoyo a la toma de decisión en licitaciones públicas según los criterios de comparación establecidos?
-3. ¿Cómo debe diseñarse e implementarse el método seleccionado en un prototipo web que garantice la correcta aplicación, reproducibilidad y trazabilidad de los resultados?
+3. ¿Cómo debe diseñarse e implementarse los métodos seleccionados en un prototipo web que garantice la correcta aplicación, reproducibilidad y trazabilidad de los resultados?
 4. ¿Qué diferencias significativas en términos de tiempo de ejecución y porcentaje de errores de cálculo presenta la evaluación automatizada mediante prototipo web en comparación con la evaluación manual de las mismas reglas?
 
 <!-- Párrafo de cierre exigido por la plantilla (ptfg_ieee.pdf). Redactado en la verificación final sintetizando solo contenido ya presente en las secciones 1, 2, 5 y 7.2; sin citas para no alterar el orden IEEE de primera aparición. Revisar redacción (tfg-writer-formal) y confirmar por los autores. -->
@@ -129,7 +129,7 @@ El estudio se centrará en la evaluación de ofertas de licitaciones realizadas 
 
 Los casos de estudio se seleccionarán según la disponibilidad de pliegos, datos de las ofertas e informes que permitan reconstruir las condiciones de evaluación. Se considerarán casos con al menos dos ofertas admisibles y comparables, e información suficiente para aplicar los métodos multicriterio. En cada caso, la comparación se realizará entre ofertas que compitan por una misma unidad de adjudicación, de acuerdo con el ítem, lote o totalidad del llamado correspondiente. Se distinguirán los requisitos obligatorios de los criterios utilizados para valorar las ofertas.
 
-La comparación se limitará a métodos de decisión multicriterio, que se elegirán según las características del problema y la información disponible. Se establecerán criterios de comparación para justificar la selección de los métodos que serán implementados en el prototipo web. Para el procedimiento elegido se analizarán propiedades verificables y se determinarán las condiciones bajo las cuales se cumplen.
+La comparación se limitará a métodos de decisión multicriterio, que se elegirán según las características del problema y la información disponible. Se establecerán criterios de comparación para justificar la selección de los métodos que serán implementados en el prototipo web. Para los procedimientos elegidos se analizarán propiedades verificables y se determinarán las condiciones bajo las cuales se cumplen.
 
 El desarrollo se limitará a un prototipo web que permita registrar ofertas, criterios y parámetros de evaluación, realizar los cálculos y consultar los datos y las reglas utilizados para obtener los resultados. Su evaluación se realizará con los casos que puedan reconstruirse y con escenarios controlados, identificados como tales. El prototipo web no abarcará la gestión completa de las contrataciones ni realizará adjudicaciones automáticas.
 
@@ -148,11 +148,11 @@ Desarrollar un prototipo web de soporte a la decisión basado en métodos de an�
 3. Comparar métodos de decisión multicriterio mediante su aplicación a los casos seleccionados, para justificar la elección de los más adecuados según los criterios de comparación establecidos.
 4. Definir la arquitectura y las herramientas tecnológicas necesarias para el desarrollo del prototipo web de soporte a la decisión.
 5. Implementar un prototipo web para el apoyo a la toma de decisión en las licitaciones.
-6. Evaluar el prototipo web mediante escenarios controlados, comprobando la correcta aplicación del método, la reproducibilidad de los cálculos, la trazabilidad de los resultados y validación de expertos.
+6. Evaluar el prototipo web con los casos reconstruidos y con escenarios controlados, verificando la correcta aplicación de los métodos implementados, la reproducibilidad de los cálculos y la trazabilidad de los resultados, y comparando el tiempo de evaluación y los errores de cálculo con la aplicación manual de las mismas reglas, con la valoración de evaluadores expertos ajenos al equipo.
 
 # 4. Hipótesis
 
-La implementación de un prototipo web basado en métodos de decisión multicriterio, seleccionado mediante la comparación de métodos para la evaluación de ofertas, reduce el tiempo de evaluación y selecciona la mejor oferta con transparencia, trazabilidad y objetividad, en comparación con los métodos tradicionales manuales en contrataciones públicas del Paraguay con adjudicaciones publicadas durante el periodo 2023–2026.
+La implementación de un prototipo web basado en métodos de decisión multicriterio, seleccionados mediante la comparación de métodos para la evaluación de ofertas, reduce el tiempo de evaluación y apoya la decisión humana en la elección de la mejor oferta con transparencia, trazabilidad y objetividad, en comparación con los métodos tradicionales manuales en contrataciones públicas del Paraguay con adjudicaciones publicadas durante el periodo 2023–2026.
 
 # 5. Fundamentación
 
@@ -164,7 +164,7 @@ La contratación pública representa una parte significativa del gasto estatal: 
 
 <!-- GB9/GB10 aplicados: todas las citas narrativas "Autor [n]" del cuerpo se reformularon a formato IEEE numérico ("En [n] se...", o cita al final de la oración). -->
 
-**Pertinencia social, científica y tecnológica:** En el ámbito social, la investigación busca contribuir a la transparencia de la evaluación de ofertas mediante resultados verificables y respaldados por evidencias documentales, en línea con la importancia de divulgar el modelo completo de evaluación [8]. En el ámbito científico, aportará una comparación de métodos de decisión multicriterio, considerando sus características, propiedades y adecuación al problema de evaluación de ofertas, con el propósito de justificar la selección del método que será implementado, siguiendo las orientaciones que vinculan la elección del método con las características del problema [13], [10]. En el ámbito tecnológico, se desarrollará un prototipo web que permita automatizar los cálculos y la clasificación de las ofertas, respetando los requisitos obligatorios, las escalas de puntuación y las ponderaciones establecidos en los pliegos de bases y condiciones, y aprovechando la eficiencia y el seguimiento asociados a la digitalización de las contrataciones [12]. La evaluación del prototipo web permitirá determinar si su utilización reduce el tiempo de evaluación y los errores de cálculo respecto del procedimiento manual, así como verificar si la vinculación de los resultados con sus datos de origen y evidencias documentales mejora la trazabilidad de las puntuaciones asignadas a cada oferta.
+**Pertinencia social, científica y tecnológica:** En el ámbito social, la investigación busca contribuir a la transparencia de la evaluación de ofertas mediante resultados verificables y respaldados por evidencias documentales, en línea con la importancia de divulgar el modelo completo de evaluación [8]. En el ámbito científico, aportará una comparación de métodos de decisión multicriterio, considerando sus características, propiedades y adecuación al problema de evaluación de ofertas, con el propósito de justificar la selección de los métodos que serán implementados, siguiendo las orientaciones que vinculan la elección del método con las características del problema [13], [10]. En el ámbito tecnológico, se desarrollará un prototipo web que permita automatizar los cálculos y la clasificación de las ofertas, respetando los requisitos obligatorios, las escalas de puntuación y las ponderaciones establecidos en los pliegos de bases y condiciones, y aprovechando la eficiencia y el seguimiento asociados a la digitalización de las contrataciones [12]. La evaluación del prototipo web permitirá determinar si su utilización reduce el tiempo de evaluación y los errores de cálculo respecto del procedimiento manual, así como verificar si la vinculación de los resultados con sus datos de origen y evidencias documentales mejora la trazabilidad de las puntuaciones asignadas a cada oferta.
 
 # 6. Impacto de la Investigación
 

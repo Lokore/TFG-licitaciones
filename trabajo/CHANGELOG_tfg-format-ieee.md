@@ -235,3 +235,126 @@ documentadas abajo para que cualquier regeneracion futura sea reproducible.
   todas las versiones de Word lo hagan sin pedir confirmación.
 - Falta el párrafo de cierre en cursiva "*Definición del problema: ...*" de
   la sección 1 (ver punto 10 arriba); es contenido pendiente, no formato.
+
+## Regeneración (segunda pasada) — hipótesis final, "métodos" en plural, objetivo 6 rediseñado
+
+Motivo: el contenido de `trabajo/anteproyecto_borrador.md` incorporó todos los
+cambios acordados con el usuario (hipótesis final, 16 cambios a plural
+"métodos", objetivo 6 rediseñado con reproducibilidad real, validación con
+expertos anonimizados y 43 tareas). Se regeneró el `.docx` desde cero con los
+mismos scripts, corrigiendo además un bug crítico de imagen detectado en mi
+propia verificación anterior.
+
+1. **Respaldo previo.** Se copió el `.docx` anterior a
+   `scratchpad/Anteproyecto_CORREGIDO_backup_20261125_013939.docx` antes de
+   sobrescribirlo.
+
+2. **Bug crítico corregido: imagen de la Figura 1.** El `.docx` anterior
+   insertaba `trabajo/img/figura_fases.png` (diagrama viejo de 5 fases,
+   tareas 1-7 y H1-H3) para la Figura 1, lo cual contradecía el apartado 8
+   reestructurado (10 fases, 43 tareas) y la Tabla 1. Se corrigió el mapeo
+   `FIGURE_IMAGES` en `md_to_docx_v2.py` para que "Figura 1:" use
+   `trabajo/img/figura2.png` (diagrama correcto de 10 fases, Inicio → 1..10 →
+   Fin, con el lazo de corrección 9→7), dejando "Figura 2:" sin cambios
+   (`trabajo/img/figura1.png`, diagrama funcional del prototipo). Verificado
+   visualmente: la Figura 1 del PDF renderizado ahora muestra las 10 fases
+   coincidentes con la Tabla 1 y el texto de 8.1/8.2.
+
+3. **Rótulo de la "caja 4" en `figura2.png` (pendiente señalado por
+   tfg-master-ieee): RESUELTO con un parche de imagen.** La caja 4 decía
+   "Comparación y selección del método" (singular); el documento ahora usa
+   "métodos" en plural de forma consistente (título de la Fase 4, índice,
+   Tabla 1). Dado que el fondo de la caja es blanco uniforme y el texto es
+   negro puro sobre una fuente sans-serif estándar (compatible con Liberation
+   Sans/Arial), fue viable parchear la imagen sin herramientas de edición
+   gráfica externas:
+   - Se midió con PIL/numpy la posición exacta del texto viejo dentro de la
+     caja (fila de texto y columnas, excluyendo los bordes del rectángulo) y
+     se calibró el tamaño de fuente (Liberation Sans 36 pt) reproduciendo el
+     ancho del texto original.
+   - Se blanqueó el área de texto interior de la caja (sin tocar los bordes
+     ni las flechas) y se redibujó "4. Comparación y selección de los
+     métodos" centrada horizontal y verticalmente en la caja, con el mismo
+     tamaño de fuente y color que el resto del diagrama.
+   - Se guardó una copia de respaldo del PNG original
+     (`scratchpad/figura2_backup.png`) antes de sobrescribir
+     `trabajo/img/figura2.png`.
+   - Verificación visual (recorte de la caja antes/después y render completo
+     del diagrama): el parche es indistinguible del resto del diagrama, sin
+     artefactos visibles; el resto de las cajas (1, 2, 3, 5-10) no se tocó.
+   - Si los autores prefieren regenerar el diagrama desde su fuente original
+     (p. ej. Graphviz/draw.io) en vez de depender de este parche de píxeles,
+     sigue siendo una mejora recomendable a futuro, pero no es necesaria para
+     que el documento actual sea correcto.
+
+4. **Bug de formato encontrado y corregido: cursiva simple no interpretada.**
+   El párrafo de cierre de la sección 1 ("*Definición del problema: ...*",
+   contenido ya incorporado por el equipo) usa cursiva simple de Markdown
+   (un solo asterisco a cada lado), pero `parse_inline()` en
+   `md_to_docx_v2.py` solo reconocía `**negrita**` y `***negrita cursiva***`.
+   Sin la corrección, el `.docx` habría mostrado los asteriscos literales
+   `*...*` en vez de aplicar cursiva. Se amplió la función para reconocer
+   también `*cursiva*`, se verificó con una búsqueda específica de patrones
+   de un solo asterisco en todo el `.md` (un único resultado: justamente este
+   párrafo) y se confirmó en el `.docx` final que el párrafo completo quedó
+   en un único `run` con `italic=True` y sin asteriscos residuales.
+
+5. **Regeneración completa.** Se re-ejecutaron `make_base_template.py` y
+   `md_to_docx_v2.py` sobre el `.md` actualizado, sin más cambios de
+   maquetación respecto de la primera pasada (misma A4, márgenes, fuente,
+   numeración multinivel, TOC real, epígrafes, tabla de estilos, coma dentro
+   de las comillas en las 42 referencias).
+
+### Verificación final (segunda pasada)
+
+- `zipfile.testzip()`: sin archivos corruptos (19 entradas en el zip).
+- Reapertura con `python-docx`: 395 párrafos, 2 tablas, 2 imágenes
+  (`word/media/image1.png`, `image2.png`), una sección A4 (21 × 29.7 cm) con
+  márgenes 3.5/3.5/3.5/3.0 cm, único tipo de letra en todo el documento
+  (`Times New Roman`), 54 encabezados con numeración `w:numPr` real.
+- Búsqueda automática de markdown sin convertir (`*`, `|`, `##`, líneas que
+  empiezan con `#`) en todos los párrafos y celdas de tabla: **0 coincidencias**.
+- Campo TOC real presente (`w:instrText` con `TOC`), `updateFields` activado.
+- Título de la sección de referencias: "Referencias Bibliográficas" (verificado
+  como `Heading 1`).
+- Epígrafes verificados: "Figura 1: Diagrama de flujo de las fases del
+  trabajo.", "Figura 2: Diagrama funcional del prototipo web.", "Tabla 1:
+  Cronograma de tareas.", "Tabla 2: Operacionalización de variables." —con el
+  orden correcto (figura, luego epígrafe debajo; epígrafe, luego tabla
+  debajo).
+- Tabla 1 (cronograma): 54 filas × 9 columnas = encabezado + 10 filas de fase
+  + 43 filas de tarea, confirmando las 43 tareas (41 originales + 8.4 y 9.5
+  de validación de expertos). Tabla 2 (operacionalización): 7 filas (encabezado
+  + 6 objetivos específicos).
+- Búsqueda de datos identificables de personas (teléfonos, correos) en todo
+  el cuerpo del documento: solo aparecen en la portada (estilo `TFG Portada`),
+  que corresponde a los datos de contacto de los propios autores exigidos por
+  la plantilla, no de los evaluadores expertos. No se encontró ningún dato
+  identificable de los evaluadores expertos en la Tabla 2 ni en el apartado
+  8.3 (solo "evaluadores expertos" como término genérico, conforme al diseño
+  de validación anonimizada acordado).
+- Render completo a PDF con LibreOffice (`soffice --headless --convert-to
+  pdf`, 50 páginas, tamaño A4 confirmado por `pdfinfo`): inspección visual
+  página por página de la Figura 1 (10 fases correctas, caja 4 corregida),
+  la Figura 2, la Tabla 1 (cronograma) y la Tabla 2, el índice (placeholder
+  del campo TOC, ver limitación de siempre) y el párrafo en cursiva de cierre
+  de la sección 1.
+
+### Limitaciones no resueltas (sin cambios respecto de la primera pasada)
+
+- Sigue pendiente **actualizar el campo TOC** abriendo el documento en Word
+  (clic derecho → "Actualizar campos" o F9) para que muestre los títulos y
+  números de página reales; `updateFields` está activado pero no hay
+  garantía de que todas las versiones de Word lo hagan sin confirmación. No
+  se pudo forzar la actualización del campo en este entorno de verificación
+  porque no hay un intérprete Python con el módulo `uno` de LibreOffice
+  disponible (en la primera pasada sí se había logrado mediante un listener
+  de `soffice` con una macro UNO; en esta sesión esa ruta no estaba
+  disponible, pero el mecanismo del campo TOC no cambió, solo el contenido
+  que alimentará una vez actualizado, ya verificado por separado mediante la
+  numeración real de los 54 encabezados).
+- El parche de la caja 4 de `figura2.png` (punto 3) es una solución de
+  imagen rasterizada (parche de píxeles), no una edición del archivo fuente
+  del diagrama (si existe uno en un formato editable como `.drawio`, `.dot`
+  o similar). Si los autores conservan el archivo fuente original, sería
+  preferible regenerar el diagrama completo desde ahí en el futuro.

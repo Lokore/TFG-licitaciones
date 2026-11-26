@@ -485,3 +485,33 @@ propia verificación anterior.
   del diagrama (si existe uno en un formato editable como `.drawio`, `.dot`
   o similar). Si los autores conservan el archivo fuente original, sería
   preferible regenerar el diagrama completo desde ahí en el futuro.
+
+## Tercera pasada (propagación del reordenamiento de citas de citation-verifier-master)
+
+citation-verifier-master reordenó ascendentemente 3 citas múltiples y movió 13
+citas al final de la oración en `trabajo/anteproyecto_borrador.md` (commit
+`1c28a02`), sin tocar contenido, tablas ni figuras. Se regeneraron ambos
+entregables a partir del `.md` actualizado, reutilizando sin cambios la
+plantilla base y el ensamblador LaTeX ya validados en la segunda pasada:
+
+- **`.docx`**: `make_base_template.py` (sin cambios) + `md_to_docx_v2.py`
+  sobre el `.md` actualizado → mismo resultado estructural que la pasada
+  anterior (395 párrafos, 2 tablas, 19 entradas en el zip, A4 con márgenes
+  3.5/3.5/3.5/3.0 cm, 54 encabezados numerados, campo TOC real, título
+  "Referencias Bibliográficas" presente). `zipfile.testzip()` sin errores.
+  Verificado con `python-docx` que la cita reordenada de Kadziński et al.
+  (referencia [34]) aparece correctamente en el cuerpo.
+- **`.tex`/`.pdf`**: se regeneró `body.tex` desde el `.md` actualizado
+  (`md_to_tex.py`, las tablas no cambiaron por lo que no fue necesario
+  rehacer `build_tables.py`) y se reensambló el documento completo
+  (`assemble.py`, mismo preámbulo/portada que las pasadas anteriores).
+  Compilado con `latexmk -pdf` sin errores fatales ni referencias
+  indefinidas (solo los mismos warnings cosméticos de *overfull/underfull
+  hbox* preexistentes, no relacionados con este cambio): 50 páginas, A4
+  confirmado por `pdfinfo`. Verificado con `pdftotext` que la referencia
+  [34] (Kadziński, Ghaderi et al.) aparece en el PDF compilado.
+- Limitación sin cambios: sigue pendiente **actualizar el campo TOC en Word**
+  (F9) al abrir el `.docx`, como ya se documentó en la primera pasada; el
+  campo sigue presente y marcado para actualizarse, pero no se puede forzar
+  su recálculo visual sin Word o LibreOffice con `uno` disponible en este
+  entorno.

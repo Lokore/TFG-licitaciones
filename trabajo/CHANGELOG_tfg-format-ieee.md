@@ -515,3 +515,42 @@ plantilla base y el ensamblador LaTeX ya validados en la segunda pasada:
   campo sigue presente y marcado para actualizarse, pero no se puede forzar
   su recálculo visual sin Word o LibreOffice con `uno` disponible en este
   entorno.
+
+## Cuarta pasada (propagación de la reescritura del marco teórico 7.1, equipo de contenido)
+
+El equipo de contenido reescribió pasajes de ELECTRE, TOPSIS, VIKOR, MAVT,
+AHP, PROMETHEE, MULTIMOORA, UTA/UTA-splines y otros del apartado 7.1 en
+`trabajo/anteproyecto_borrador.md` (commits `57be0c4` y `6f4d8ea`), para que
+las citas queden al final de la oración en vez de "En [n] ..." al inicio, y
+para corregir una atribución indebida en el párrafo de TOPSIS. Confirmado por
+`diff` contra la versión anterior del `.md`: cambios de texto exclusivamente
+dentro del apartado 7.1, sin alterar numeración de secciones, tablas, figuras
+ni la lista de referencias (mismos corchetes `[n]` citados, solo reordenados
+dentro de cada oración). No correspondía re-ejecutar la verificación
+exhaustiva completa (imagen, márgenes, TOC, etc. no cambiaron); se hizo una
+verificación rápida de regeneración y de que el texto nuevo esté presente en
+ambos entregables.
+
+- **`.docx`**: se respaldó el `.docx` anterior en
+  `trabajo/backup_20261126_*/` y se regeneró con el mismo `base_template.docx`
+  ya validado (sin cambios) + `.claude/scripts/md_to_docx_v2.py` (sin cambios
+  en el script) sobre el `.md` actualizado. Resultado idéntico en estructura
+  a la pasada anterior: 19 entradas en el zip (`zipfile.testzip()` sin
+  errores), 395 párrafos, 2 tablas, sección A4 con márgenes 3.5/3.5/3.5/3.0 cm,
+  54 encabezados numerados, "Referencias Bibliográficas" presente. Verificado
+  con `python-docx` que los 7 pasajes reescritos (ELECTRE, TOPSIS, VIKOR, MAVT,
+  AHP, UTA, regresión ordinal robusta) aparecen literalmente en el cuerpo del
+  documento.
+- **`.tex`/`.pdf`**: se regeneró `body.tex` desde el `.md` actualizado con
+  `md_to_tex.py` (sin cambios en el script), se reconstruyeron `table1.tex`/
+  `table2.tex` con `build_tables.py` por prolijidad aunque las tablas no
+  cambiaron, y se reensambló el documento completo con `assemble.py` (mismo
+  preámbulo/portada). Compilado con `latexmk -pdf`: sin errores fatales, sin
+  "Undefined" ni "! LaTeX Error" en el log (`grep` dedicado sin coincidencias),
+  solo los mismos warnings cosméticos de *overfull/underfull hbox*
+  preexistentes. 50 páginas, A4 confirmado por `pdfinfo`. Verificado con
+  `pdftotext -layout` que los mismos 7 pasajes reescritos aparecen en el PDF
+  compilado, incluyendo el párrafo corregido de TOPSIS ("El procedimiento de
+  TOPSIS incluye la normalización de la matriz de decisión...").
+- Limitación sin cambios (idéntica a las pasadas anteriores): sigue pendiente
+  **actualizar el campo TOC en Word** (F9) al abrir el `.docx`.

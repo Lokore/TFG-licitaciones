@@ -554,3 +554,37 @@ ambos entregables.
   TOPSIS incluye la normalización de la matriz de decisión...").
 - Limitación sin cambios (idéntica a las pasadas anteriores): sigue pendiente
   **actualizar el campo TOC en Word** (F9) al abrir el `.docx`.
+
+## Quinta pasada (propagación del fix puntual de "En [n]" en la sección 5, equipo de contenido)
+
+`citation-verifier-master` reformuló los 4 últimos casos restantes del
+patrón "En [n] se..." fuera del marco teórico, dentro del párrafo
+"Revisión de literatura" de la sección 5 (commit `3afac59`), para que la
+cita quede al final de la oración, igual que en el apartado 7.1. Cambio de
+texto exclusivamente dentro de ese párrafo; sin alteración de numeración de
+secciones, tablas, figuras ni la lista de referencias. Al no haber cambios
+estructurales, no se repitió la verificación exhaustiva completa (márgenes,
+TOC, estilos de tabla, etc. no se tocaron); solo se repropagó el cambio de
+texto a ambos entregables y se verificó su presencia.
+
+- **`.docx`**: regenerado desde cero con el mismo `base_template.docx` (sin
+  cambios) y `.claude/scripts/md_to_docx_v2.py` (sin cambios en el script)
+  sobre el `.md` actualizado. `zipfile.testzip()` sin errores; 395
+  párrafos, 2 tablas (igual que la pasada anterior). Verificado con
+  `python-docx` que las 4 oraciones reformuladas aparecen literalmente en
+  el cuerpo del documento y que ya no queda ningún "En [3] se aplicó",
+  "En [4] se analizó", "En [10] y [13] se desarrollaron" ni "En [8] se
+  estudió" en el texto.
+- **`.tex`/`.pdf`**: `body.tex` regenerado con `md_to_tex.py` (sin cambios
+  en el script) desde el `.md` actualizado; `table1.tex`/`table2.tex`
+  reconstruidas con `build_tables.py` por prolijidad (tablas sin cambios);
+  reensamblado con `assemble.py` (mismo preámbulo/portada) y compilado con
+  `latexmk -pdf`. Log sin líneas "! " (errores fatales) ni "Undefined";
+  solo los mismos warnings cosméticos de *overfull/underfull hbox*
+  preexistentes en las referencias con URLs largas. 50 páginas (igual que
+  antes). Verificado con `pdftotext -layout` que las 4 oraciones aparecen
+  en el PDF compilado y que no queda el patrón antiguo.
+- Los `.docx`/`.tex`/`.pdf` previos a este fix se respaldaron en el
+  scratchpad de la sesión (no dentro del repositorio).
+- Limitación sin cambios: sigue pendiente **actualizar el campo TOC en
+  Word** (F9) al abrir el `.docx`.
